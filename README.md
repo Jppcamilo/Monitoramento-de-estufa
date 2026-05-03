@@ -8,7 +8,7 @@ Projeto de Internet das Coisas (IoT) desenvolvido para o curso de Análise e Des
 * Pamella Christiny Chaves Brito
 
 ## 🎥 Demonstração
-* **Vídeo do projeto rodando:** [https://youtu.be/vJaBlemnND8](https://youtu.be/vJaBlemnND8)]
+* **Vídeo do projeto rodando:** [https://youtu.be/vJaBlemnND8](https://youtu.be/vJaBlemnND8)
 
 ## 🏗️ Arquitetura do Projeto
 A solução foi desenhada para conectar hardware simulado a um banco de dados em nuvem através de mensageria assíncrona:
