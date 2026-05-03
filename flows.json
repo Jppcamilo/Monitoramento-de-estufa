@@ -1,0 +1,596 @@
+[
+    {
+        "id": "e70eda2d9db13cc7",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ee0bae40bf5bdfda",
+        "type": "MySQLdatabase",
+        "name": "Banco IOTFIAP2",
+        "host": "bervjpmuymaez7jryy0o-mysql.services.clever-cloud.com",
+        "port": "3306",
+        "db": "bervjpmuymaez7jryy0o",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "d5ff332d83eafb91",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "ce918f0e6272473fa7f0a26b9b481604.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "804dcff7a419f376",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "8b061581e9d713fb",
+        "type": "ui_tab",
+        "name": "Monitoramento Estufa",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "618be948a6d3e4cb",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "289a24a8723dbf87",
+        "type": "ui_group",
+        "name": "Monitoramento Estufa",
+        "tab": "8b061581e9d713fb",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "804dcff7a419f376",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "9a8ccaab0f0385d8",
+        "type": "mysql",
+        "z": "e70eda2d9db13cc7",
+        "mydb": "ee0bae40bf5bdfda",
+        "name": "",
+        "x": 1110,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d4c29088a5b59b1",
+        "type": "mqtt in",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "topic": "maquina1/luminosidade",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d5ff332d83eafb91",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 460,
+        "y": 540,
+        "wires": [
+            [
+                "3e35b789683ef8e9",
+                "d6206e9337c8f909"
+            ]
+        ]
+    },
+    {
+        "id": "2fe6022fe54a9990",
+        "type": "mqtt in",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "topic": "maquina1/umidade",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d5ff332d83eafb91",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 470,
+        "y": 380,
+        "wires": [
+            [
+                "3e35b789683ef8e9",
+                "192252a49746ba93"
+            ]
+        ]
+    },
+    {
+        "id": "4f862e1cd9ebd32b",
+        "type": "mqtt in",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "topic": "maquina1/temperatura",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d5ff332d83eafb91",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 520,
+        "y": 200,
+        "wires": [
+            [
+                "3e35b789683ef8e9",
+                "a97a1821115ea970"
+            ]
+        ]
+    },
+    {
+        "id": "3e35b789683ef8e9",
+        "type": "function",
+        "z": "e70eda2d9db13cc7",
+        "name": "function 1",
+        "func": "// Recupera o contexto do fluxo, ou cria um objeto vazio se não existir\nlet dados = flow.get('dadosEstufa') || { temperatura: null, umidade: null, luminosidade: null };\n\n// Verifica o tópico e atualiza o valor correspondente no objeto 'dados'\nif (msg.topic === \"maquina1/temperatura\") {\n    dados.temperatura = Number(msg.payload);\n} else if (msg.topic === \"maquina1/umidade\") {\n    dados.umidade = Number(msg.payload);\n} else if (msg.topic === \"maquina1/luminosidade\") {\n    dados.luminosidade = Number(msg.payload);\n}\n\n// Salva o estado atualizado de volta no contexto do fluxo\nflow.set('dadosEstufa', dados);\n\n// Verifica se já temos os três valores\nif (dados.temperatura !== null && dados.umidade !== null && dados.luminosidade !== null) {\n    \n    // Monta a query para o banco\n    msg.topic = `INSERT INTO medicoes_estufa (temperatura, umidade, luminosidade) VALUES (${dados.temperatura}, ${dados.umidade}, ${dados.luminosidade})`;\n    \n    // Zera os valores para a próxima rodada\n    flow.set('dadosEstufa', { temperatura: null, umidade: null, luminosidade: null });\n    \n    return msg; // Envia o comando\n}\n\nreturn null; // Interrompe se não tiver os três",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 400,
+        "wires": [
+            [
+                "9a8ccaab0f0385d8",
+                "a81adf46d5ea386b"
+            ]
+        ]
+    },
+    {
+        "id": "a97a1821115ea970",
+        "type": "ui_gauge",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "group": "289a24a8723dbf87",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "20",
+        "seg2": "25 , 35",
+        "diff": false,
+        "className": "",
+        "x": 810,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "192252a49746ba93",
+        "type": "ui_gauge",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "group": "289a24a8723dbf87",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 800,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d6206e9337c8f909",
+        "type": "ui_chart",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "group": "289a24a8723dbf87",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Histórico de Luz",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "4095",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 820,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0a07140656340375",
+        "type": "inject",
+        "z": "e70eda2d9db13cc7",
+        "name": "Temperatura Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "maquina1/temperatura",
+        "payload": "28",
+        "payloadType": "num",
+        "x": 550,
+        "y": 140,
+        "wires": [
+            [
+                "a97a1821115ea970",
+                "3e35b789683ef8e9"
+            ]
+        ]
+    },
+    {
+        "id": "2fd6d7e09ccf1d90",
+        "type": "inject",
+        "z": "e70eda2d9db13cc7",
+        "name": "Umidade Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "maquina1/umidade",
+        "payload": "65",
+        "payloadType": "num",
+        "x": 480,
+        "y": 300,
+        "wires": [
+            [
+                "192252a49746ba93",
+                "3e35b789683ef8e9"
+            ]
+        ]
+    },
+    {
+        "id": "97138c0b3164e493",
+        "type": "inject",
+        "z": "e70eda2d9db13cc7",
+        "name": "Luminosidade Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "maquina1/luminosidade",
+        "payload": "1500",
+        "payloadType": "num",
+        "x": 450,
+        "y": 480,
+        "wires": [
+            [
+                "d6206e9337c8f909",
+                "3e35b789683ef8e9"
+            ]
+        ]
+    },
+    {
+        "id": "a81adf46d5ea386b",
+        "type": "debug",
+        "z": "e70eda2d9db13cc7",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "a941953e9f8a2f1c",
+        "type": "inject",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 370,
+        "y": 640,
+        "wires": [
+            [
+                "e482f927f71238ae"
+            ]
+        ]
+    },
+    {
+        "id": "e482f927f71238ae",
+        "type": "http request",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.openweathermap.org/data/2.5/weather?q=Sao%20Paulo&appid=915ec042a00d0d29ad536d753bcdb384&units=metric&lang=pt_brhttps://api.openweathermap.org/data/2.5/weather?q=Sao%20Paulo&appid=915ec042a00d0d29ad536d753bcdb384&units=metric&lang=pt_br",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 600,
+        "y": 640,
+        "wires": [
+            [
+                "08cab67229d615e9"
+            ]
+        ]
+    },
+    {
+        "id": "08cab67229d615e9",
+        "type": "function",
+        "z": "e70eda2d9db13cc7",
+        "name": "function 2",
+        "func": "\nlet tempExterna = msg.payload.main.temp;\n\n\nmsg.payload = tempExterna;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 640,
+        "wires": [
+            [
+                "6eb5b5761e766bfd"
+            ]
+        ]
+    },
+    {
+        "id": "6eb5b5761e766bfd",
+        "type": "ui_gauge",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "group": "289a24a8723dbf87",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Clima Externo",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 960,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "924ad2e85dfc59d9",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-node-mysql": "3.0.0",
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
