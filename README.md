@@ -4,7 +4,9 @@ Projeto de Internet das Coisas (IoT) desenvolvido para o curso de Análise e Des
 
 ## 👨‍💻 Integrante
 * João Pedro Camilo (RM 562005)
-
+* Lucas Matsubara Reis (RM 565020)
+* Pamella Christiny Chaves Brito (RM 565206)
+  
 ## 🎥 Demonstração do Projeto
 * **Link do vídeo:** [https://youtu.be/vJaBlemnND8](https://youtu.be/vJaBlemnND8)
 
